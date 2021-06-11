@@ -17,7 +17,7 @@ class CreateWisataTable extends Migration
             $table->smallIncrements('id_wisata');
             $table->string('nama_wisata', 50);
             $table->text('alamat_wisata');
-            $table->string('gambar_wisata', 255);
+            $table->string('gambar_wisata', 255)->nullable();
             $table->text('deskripsi_wisata');
             $table->bigInteger('harga_wisata');
             $table->text('tag');

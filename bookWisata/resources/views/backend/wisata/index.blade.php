@@ -21,7 +21,7 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Wisata</h1>
+            <h1 class="h3 ml-3 text-gray-800">Wisata</h1>
             <a href="{{ route('wisata.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> + Tambah Data Baru</a>
     </div>
 
@@ -66,7 +66,7 @@
                                 {{ $item->name }}
                             </td>
                             <td>{{ $item->deskripsi_wisata }}</td>
-                            <td class="text-right">Rp.{{ $item->harga_wisata }}</td>
+                            <td class="text-right">Rp. {{number_format ($item->harga_wisata, 2) }}</td>
                             <td> {{ $item->tag }} </td>
                             <td>
                                 <div class="form-inline p-0">
@@ -77,6 +77,7 @@
                                         <button type="button" class="btn btn-danger" title="Hapus" data-toggle="tooltip" onclick="confirm('{{ __("Apakah anda yakin ingin menghapus ?") }}')? this.parentElement.submit() : ''">
                                             <span class="fa fa-minus-circle"></span>
                                         </button>
+                                    </form>
                                 </div>
                             </td>
                           </tr>

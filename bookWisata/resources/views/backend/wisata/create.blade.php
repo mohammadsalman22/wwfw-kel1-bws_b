@@ -21,13 +21,13 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Wisata</h1>
+            <h1 class="h3 ml-3 text-gray-800">Wisata</h1>
             <a href="{{ route('wisata.index') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Lihat Semua Data</a>
     </div>
 
     @if ($errors->any())
         <div class=" alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br> 
+            <strong>Whoops!</strong> Terdapat kesalahan pada input anda.<br><br> 
             <ul>
                 @foreach ($errors->all() as $error)
                     <li> {{ $error}} </li>
@@ -50,6 +50,9 @@
                     <div class="form-group">
                         <label for="nama_wisata">Nama Wisata</label>
                         <input type="text" class="form-control" id="nama_wisata" placeholder="Masukkan Nama Wisata" name="nama_wisata">
+                        @error('nama_wisata')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="alamat_wisata">Alamat Wisata</label>
@@ -65,7 +68,7 @@
                     </div>
                     <div class="form-group">
                         <label for="harga_wisata">Harga Wisata</label>
-                        <input type="number" class="form-control" id="harga_wisata" name="harga_wisata" placeholder="Masukkan Harga Wisata">
+                        <input class="form-control" type="number" step="any" class="form-control" id="harga_wisata" name="harga_wisata" placeholder="Masukkan Harga Wisata">
                     </div>
                     <div class="form-group">
                         <label for="tag">Tag</label>

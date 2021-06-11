@@ -21,7 +21,7 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Wisata</h1>
+            <h1 class="h3 ml-3 text-gray-800">Wisata</h1>
             <a href="{{ route('wisata.index') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Lihat Semua Data</a>
     </div>
 
@@ -59,7 +59,7 @@
                     <div class="form-group">
                         <label for="gambar_wisata">Gambar Wisata</label>
                         <input type="file" class="form-control-file" id="gambar_wisata" name="gambar_wisata" value="{{ $wisata->gambar_wisata }}"><br>
-                        <img width="100px" height="100px" src="../assets/images/{{ $wisata->gambar_wisata }}">
+                        <img width="100px" height="100px" src="{{ url(''.$wisata->gambar_wisata) }}" alt=" {{ $wisata->name }}">
                     </div>
                     <div class="form-group">
                         <label  for="deskripsi_wisata">Deskripsi Wisata</label>
