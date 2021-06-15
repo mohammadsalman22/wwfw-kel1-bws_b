@@ -17,7 +17,7 @@ class CreateTravelHomestayTable extends Migration
             $table->smallIncrements('id_travel_homestay');
             $table->string('nama_travel_homestay', 50);
             $table->text('alamat_travel_homestay');
-            $table->string('gambar_travel_homestay', 255);
+            $table->string('gambar_travel_homestay', 255)->nullable();
             $table->text('deskripsi_travel_homestay');
             $table->bigInteger('harga_travel_homestay');
             $table->text('tag');

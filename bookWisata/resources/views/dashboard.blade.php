@@ -10,7 +10,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
               <li class="breadcrumb-item active">Dashboard v1</li>
             </ol>
           </div><!-- /.col -->
@@ -32,7 +32,7 @@
         <div class="col mr-2">
           <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Data Wisata</div>
           
-          <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800"> {{ $wisata }} </div>
         </div>
         <div class="col-auto">
           <i class="fa fa-map-marker fa-2x text-gray-300"></i>
@@ -50,7 +50,7 @@
         <div class="col mr-2">
           <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Data Travel & Homestay</div>
           
-          <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$travel_homestay}} </div>
         </div>
         <div class="col-auto">
           <i class="fa fa-bus fa-2x text-gray-300"></i>
@@ -68,7 +68,7 @@
         <div class="col mr-2">
           <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Data Admin</div>
           
-          <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$admin}} </div>
         </div>
         <div class="col-auto">
           <i class="fa fa-bed fa-2x text-gray-300"></i>
@@ -86,7 +86,7 @@
         <div class="col mr-2">
           <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Data User</div>
           
-          <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$user}} </div>
         </div>
         <div class="col-auto">
           <i class="fas fa-fw fa-chart-area fa-2x text-gray-300"></i>
@@ -102,9 +102,9 @@
     <div class="card-body">
       <div class="row no-gutters align-items-center">
         <div class="col mr-2">
-          <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Data User</div>
+          <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Data Transaksi</div>
           
-          <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$booking}} </div>
         </div>
         <div class="col-auto">
           <i class="fa fa-users fa-2x text-gray-300"></i>
@@ -122,7 +122,7 @@
         <div class="col mr-2">
           <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Data Pengunjung</div>
           
-          <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+          <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$visitor}} </div>
         </div>
         <div class="col-auto">
           <i class="fa fa-bed fa-2x text-gray-300"></i>
