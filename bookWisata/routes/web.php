@@ -14,17 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing-page');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/dashboard','App\Http\Controllers\DashboardController@index')->name('dashboard');
+Route::group(['middleware' => 'auth'], function () {
 
-Route::resource('wisata','App\Http\Controllers\WisataController');
+    Route::get('/dashboard','App\Http\Controllers\DashboardController@index')->name('dashboard');
 
-Route::resource('travel_homestay','App\Http\Controllers\TravelHomestayController');
+    Route::resource('wisata','App\Http\Controllers\WisataController');
+
+    Route::resource('travel_homestay','App\Http\Controllers\TravelHomestayController');
+
+    Route::resource('user','App\Http\Controllers\UserController');
+
+    Route::resource('metode','App\Http\Controllers\MetodeController');
+
+    Route::resource('admin', 'App\Http\Controllers\UsersController')
+        ->middleware('auth');
+});
+
+
 
 require __DIR__.'/auth.php';

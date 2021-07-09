@@ -18,13 +18,12 @@ class CreateBookingTable extends Migration
             $table->dateTime('waktu_mulai');
             $table->dateTime('waktu_akhir');
             $table->bigInteger('total_harga');
+            $table->enum('status', ['Berhasil', 'Menunggu','Gagal']);
             $table->smallInteger('id_pembayaran', false, true);
-            $table->mediumInteger('id_admin', false, true);
             $table->smallInteger('id_user', false, true);
             $table->timestamps();
 
             $table->foreign('id_pembayaran')->references('id_pembayaran')->on('metode_pembayaran')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreign('id_admin')->references('id_admin')->on('admin')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreign('id_user')->references('id_user')->on('user')->cascadeOnDelete()->cascadeOnUpdate();
         });
     }

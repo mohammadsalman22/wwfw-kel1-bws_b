@@ -15,8 +15,8 @@ class CreateDetailBookingTable extends Migration
     {
         Schema::create('detail_booking', function (Blueprint $table) {
             $table->tinyInteger('kode_booking', false, true);
-            $table->smallInteger('id_wisata', false, true);
-            $table->smallInteger('id_travel_homestay', false, true);
+            $table->smallInteger('id_wisata', false, true)->nullable();
+            $table->smallInteger('id_travel_homestay', false, true)->nullable();
             $table->smallInteger('jumlah_pesan');
             $table->timestamps();
 

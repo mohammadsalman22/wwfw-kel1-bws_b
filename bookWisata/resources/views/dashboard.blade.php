@@ -10,8 +10,6 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -35,7 +33,7 @@
           <div class="h5 mb-0 font-weight-bold text-gray-800"> {{ $wisata }} </div>
         </div>
         <div class="col-auto">
-          <i class="fa fa-map-marker fa-2x text-gray-300"></i>
+          <i class="fa fa-map fa-2x text-gray-300"></i>
         </div>
       </div>
     </div>
@@ -71,7 +69,7 @@
           <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$admin}} </div>
         </div>
         <div class="col-auto">
-          <i class="fa fa-bed fa-2x text-gray-300"></i>
+          <i class="fa fa-user fa-2x text-gray-300"></i>
         </div>
       </div>
     </div>
@@ -89,7 +87,7 @@
           <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$user}} </div>
         </div>
         <div class="col-auto">
-          <i class="fas fa-fw fa-chart-area fa-2x text-gray-300"></i>
+          <i class="fa fa-users fa-2x text-gray-300"></i>
         </div>
       </div>
     </div>
@@ -107,7 +105,7 @@
           <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$booking}} </div>
         </div>
         <div class="col-auto">
-          <i class="fa fa-users fa-2x text-gray-300"></i>
+          <i class="fa fa-shopping-cart fa-2x text-gray-300"></i>
         </div>
       </div>
     </div>
@@ -125,13 +123,30 @@
           <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$visitor}} </div>
         </div>
         <div class="col-auto">
-          <i class="fa fa-bed fa-2x text-gray-300"></i>
+          <i class="fa fa-eye fa-2x text-gray-300"></i>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Earnings (Monthly) Card Example -->
+<div class="col-xl-4 col-md-6 mb-4">
+  <div class="card border-left-info shadow h-100 py-2">
+    <div class="card-body">
+      <div class="row no-gutters align-items-center">
+        <div class="col mr-2">
+          <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Data Metode Pembayaran</div>
+          
+          <div class="h5 mb-0 font-weight-bold text-gray-800"> {{$metode}} </div>
+        </div>
+        <div class="col-auto">
+          <i class="fa fa-credit-card fa-2x text-gray-300"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="col-xl-4 col-md-6 mb-4">
     </section>
