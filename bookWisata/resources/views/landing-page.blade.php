@@ -5,22 +5,22 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('frontend/img/carousel-1.jpg') }}" alt="Image">
+                    <img class="w-100" src="{{ asset('frontend/img/sempol.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                            <h1 class="display-3 text-white mb-md-4">Let's Discover The World Together</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                            <h4 class="text-white text-uppercase mb-md-3">Paket Wisata Lokal</h4>
+                            <h1 class="display-3 text-white mb-md-4">Cari Destinasi Liburanmu Disini</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Ayo Pesan</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('frontend/img/carousel-2.jpg') }}" alt="Image">
+                    <img class="w-100" src="{{ asset('frontend/img/museumkereta.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                            <h1 class="display-3 text-white mb-md-4">Discover Amazing Places With Us</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                            <h4 class="text-white text-uppercase mb-md-3">Simpel dan Nyaman</h4>
+                            <h1 class="display-3 text-white mb-md-4">Pilihan Paket Yang Lengkap Dan Aman</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Ayo Pesan</a>
                         </div>
                     </div>
                 </div>
@@ -50,10 +50,10 @@
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Destination</option>
-                                        <option value="1">Destination 1</option>
-                                        <option value="2">Destination 1</option>
-                                        <option value="3">Destination 1</option>
+                                        <option selected>Pilih Paket</option>
+                                        <option value="1">Paket Hemat</option>
+                                        <option value="2">Paket Keluarga</option>
+                                        <option value="3">Paket SUper</option>
                                     </select>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Lengkap</h6>
                         <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
                         <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
                         <div class="row mb-4">
@@ -171,7 +171,7 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Destination</h6>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Paket Wisata</h6>
                 <h1>Explore Top Destination</h1>
             </div>
             <div class="row">
