@@ -60,31 +60,31 @@
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
+                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Berangkat" data-target="#date1" data-toggle="datetimepicker"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
+                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Pulang" data-target="#date2" data-toggle="datetimepicker"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Duration</option>
-                                        <option value="1">Duration 1</option>
-                                        <option value="2">Duration 1</option>
-                                        <option value="3">Duration 1</option>
+                                        <option selected>Jumlah</option>
+                                        <option value="1">1 Orang</option>
+                                        <option value="2">2 Orang</option>
+                                        <option value="3">3 Orang</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
+                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Cari</button>
                     </div>
                 </div>
             </div>
@@ -99,23 +99,23 @@
             <div class="row">
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/about.jpg') }}" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/gijen.jpg') }}" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Lengkap</h6>
-                        <h1 class="mb-3">We Provide Best Tour Packages In Your Budget</h1>
-                        <p>Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">SIMPEL</h6>
+                        <h1 class="mb-3">Destinasi Wisata Yang Dikemas Menjadi Satu Paket</h1>
+                        <p>Menyediakan wisata yang anda inginkan seperti wisata alam dan tranportasi serta terdapat penginapan yang menyempurnakan liburan anda.</p>
                         <div class="row mb-4">
                             <div class="col-6">
-                                <img class="img-fluid" src="{{ asset('frontend/img/about-1.jpg') }}" alt="">
+                                <img class="img-fluid" src="{{ asset('frontend/img/transportasi.jpg') }}" alt="">
                             </div>
                             <div class="col-6">
-                                <img class="img-fluid" src="{{ asset('frontend/img/about-2.jpg') }}" alt="">
+                                <img class="img-fluid" src="{{ asset('frontend/img/penginapan.jpg') }}" alt="">
                             </div>
                         </div>
-                        <a href="" class="btn btn-primary mt-1">Book Now</a>
+                        <a href="" class="btn btn-primary mt-1">Pesan Sekarang</a>
                     </div>
                 </div>
             </div>
@@ -134,8 +134,8 @@
                             <i class="fa fa-2x fa-money-check-alt text-white"></i>
                         </div>
                         <div class="d-flex flex-column">
-                            <h5 class="">Competitive Pricing</h5>
-                            <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
+                            <h5 class="">Mudahnya Berwisata</h5>
+                            <p class="m-0">Dengan adanya pilihan paket mempercepat anda dalam berwisata</p>
                         </div>
                     </div>
                 </div>
@@ -145,8 +145,8 @@
                             <i class="fa fa-2x fa-award text-white"></i>
                         </div>
                         <div class="d-flex flex-column">
-                            <h5 class="">Best Services</h5>
-                            <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
+                            <h5 class="">Pelayanan Terbaik</h5>
+                            <p class="m-0">Pilihan paket yang tersedia sudah memiliki pelayanan yang terbaik</p>
                         </div>
                     </div>
                 </div>
@@ -156,8 +156,8 @@
                             <i class="fa fa-2x fa-globe text-white"></i>
                         </div>
                         <div class="d-flex flex-column">
-                            <h5 class="">Worldwide Coverage</h5>
-                            <p class="m-0">Magna sit magna dolor duo dolor labore rebum amet elitr est diam sea</p>
+                            <h5 class="">Destinasi Menarik</h5>
+                            <p class="m-0">Tempat wisata yang tersedia merupakan tempat yang bagus dan indah</p>
                         </div>
                     </div>
                 </div>
@@ -171,61 +171,61 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Paket Wisata</h6>
-                <h1>Explore Top Destination</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Galeri</h6>
+                <h1>Dokumentasi Pengguna</h1>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="{{ asset('frontend/img/destination-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('frontend/img/galeri6.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United States</h5>
-                            <span>100 Cities</span>
+                            <h5 class="text-white">Wisata</h5>
+                            <span>Sempol</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="{{ asset('frontend/img/destination-2.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('frontend/img/galeri2.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">United Kingdom</h5>
-                            <span>100 Cities</span>
+                            <h5 class="text-white">Transportasi</h5>
+                            <span>Mobil</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="{{ asset('frontend/img/destination-3.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('frontend/img/galeri3.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Australia</h5>
-                            <span>100 Cities</span>
+                            <h5 class="text-white">Wisata</h5>
+                            <span>Pemandangan Arak-arak</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="{{ asset('frontend/img/destination-4.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('frontend/img/galeri4.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">India</h5>
-                            <span>100 Cities</span>
+                            <h5 class="text-white">Penginapan</h5>
+                            <span>Hotel Palm</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="{{ asset('frontend/img/destination-5.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('frontend/img/galeri5.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">South Africa</h5>
-                            <span>100 Cities</span>
+                            <h5 class="text-white">Wisata</h5>
+                            <span>Tirta Agung</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="destination-item position-relative overflow-hidden mb-2">
-                        <img class="img-fluid" src="{{ asset('frontend/img/destination-6.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('frontend/img/galeri1.jpg') }}" alt="">
                         <a class="destination-overlay text-white text-decoration-none" href="">
-                            <h5 class="text-white">Indonesia</h5>
-                            <span>100 Cities</span>
+                            <h5 class="text-white">Transportasi</h5>
+                            <span>Mobil</span>
                         </a>
                     </div>
                 </div>
@@ -239,29 +239,29 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-                <h1>Tours & Travel Services</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Servis</h6>
+                <h1>Paket WIsata Lokal</h1>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Travel Guide</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
+                        <h5 class="mb-2">Wisata Alam</h5>
+                        <p class="m-0">Terdapat wisata alam yang menyejukkan mata seperti gunung, air terjun dan pemandangan</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
-                        <h5 class="mb-2">Ticket Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
+                        <h5 class="mb-2">Transportasi</h5>
+                        <p class="m-0">Menyediakan akomodasi transportasi yang akan mengantar selama perjalanan</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="service-item bg-white text-center mb-2 py-5 px-4">
                         <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
-                        <h5 class="mb-2">Hotel Booking</h5>
-                        <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
+                        <h5 class="mb-2">Penginapan</h5>
+                        <p class="m-0">Tidak perlu khawatir jika ingin bermalam karena terdapat banyak penginapan yang tersedia</p>
                     </div>
                 </div>
             </div>
@@ -274,8 +274,8 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Packages</h6>
-                <h1>Pefect Tour Packages</h1>
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Paket</h6>
+                <h1>Pilihan Paket Populer</h1>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
