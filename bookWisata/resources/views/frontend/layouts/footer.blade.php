@@ -1,4 +1,4 @@
-<div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+<div id='kontak' class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 0px;">
     <div class="row pt-5">
         <div class="col-lg-3 col-md-6 mb-5">
             <a href="" class="navbar-brand">
@@ -15,10 +15,10 @@
         <div class="col-lg-3 col-md-6 mb-5">
             <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Fitur</h5>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Tentang</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Galeri</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pilihan Paket</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Kontak</a>
+                <a href='#tentang' class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Tentang</a>
+                <a href='#galeri' class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Galeri</a>
+                <a href='#pilihanpaket' class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pilihan Paket</a>
+                <a href='#kontak' class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Kontak</a>
             </div>
         </div>
         <div class="col-lg-3 col-md-6 mb-5">
@@ -26,15 +26,6 @@
             <p><i class="fa fa-map-marker-alt mr-2"></i>Bondowoso, Jawa Timur</p>
             <p><i class="fa fa-phone-alt mr-2"></i>+62 81252600127</p>
             <p><i class="fa fa-envelope mr-2"></i>salmanbahamisah@gmail.com</p>
-            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
-            <div class="w-100">
-                <div class="input-group">
-                    <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary px-3">Sign Up</button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

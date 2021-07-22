@@ -9,18 +9,11 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Beranda</a>
-                    <a href="about.html" class="nav-item nav-link">Tentang</a>
-                    <a href="service.html" class="nav-item nav-link">Galeri</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pilihan Paket</a>
-                        <div class="dropdown-menu border-0 rounded-0 m-0">
-                            <a href="blog.html" class="dropdown-item">Wista Alam</a>
-                            <a href="single.html" class="dropdown-item">Wisata Kuliner</a>
-                            <a href="destination.html" class="dropdown-item">Tranportasi</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Kontak</a>
+                    <a href='#beranda' class="nav-item nav-link active">Beranda</a>
+                    <a href='#tentang' class="nav-item nav-link">Tentang</a>
+                    <a href='#galeri' class="nav-item nav-link">Galeri</a>
+                    <a href='#pilihanpaket' class="nav-item nav-link">Pilihan Paket</a>
+                    <a href='#kontak' class="nav-item nav-link">Kontak</a>
                 </div>
             </div>
         </nav>
