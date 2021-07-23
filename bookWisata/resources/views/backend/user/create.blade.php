@@ -27,13 +27,13 @@
 
     @if ($errors->any())
         <div class=" alert alert-danger">
-            <strong>Whoops!</strong> Terdapat kesalahan pada input anda.<br><br> 
+            <strong>Whoops!</strong> Terdapat kesalahan pada input anda.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li> {{ $error}} </li>
                 @endforeach
             </ul>
-        </div>    
+        </div>
     @endif
 
     <!-- Main content -->
@@ -88,10 +88,10 @@
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email">
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="foto">Foto</label>
                         <input type="file" class="form-control-file" id="foto" name="foto">
-                    </div>
+                    </div> --}}
                     <input type="submit" value="simpan" class="btn btn-primary"></td>
                 </form>
                 </div>

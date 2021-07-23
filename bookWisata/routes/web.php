@@ -23,17 +23,17 @@ Route::get('/dashboard', function () {
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/dashboard','App\Http\Controllers\DashboardController@index')->name('dashboard');
+    Route::get('/dashboard','DashboardController@index')->name('dashboard');
 
-    Route::resource('wisata','App\Http\Controllers\WisataController');
+    Route::resource('wisata','WisataController');
 
-    Route::resource('travel_homestay','App\Http\Controllers\TravelHomestayController');
+    Route::resource('travel_homestay','TravelHomestayController');
 
-    Route::resource('user','App\Http\Controllers\UserController');
+    Route::resource('user','UserController');
 
-    Route::resource('metode','App\Http\Controllers\MetodeController');
+    Route::resource('metode','MetodeController');
 
-    Route::resource('admin', 'App\Http\Controllers\UsersController')
+    Route::resource('admin', 'UsersController')
         ->middleware('auth');
 });
 

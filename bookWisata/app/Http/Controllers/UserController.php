@@ -51,12 +51,12 @@ class UserController extends Controller
             'jk'=>'required',
             'alamat'=>'required',
             'no_hp'=>'required',
-            'email' => 'required|regex:/(.+)@(.+)\.(.+)/i',
-            'foto' => 'required'
+            'email' => 'required|regex:/(.+)@(.+)\.(.+)/i'
+            // 'foto' => 'required'
         ],
         [
             'required' => 'Harap isi :attribute',
-            'alamat.required' => 'Isi Alamat', 
+            'alamat.required' => 'Isi Alamat',
             'min' => 'Panjang karakter minimal 6',
         ],
         [
@@ -66,8 +66,8 @@ class UserController extends Controller
             'jk' => 'Jenis Kelamin',
             'alamat' => 'Alamat',
             'no_hp' => 'Nomer Hp',
-            'email' => 'Email',
-            'foto' => 'Foto',
+            'email' => 'Email'
+            // 'foto' => 'Foto',
         ]);
 
         try{
@@ -82,21 +82,21 @@ class UserController extends Controller
             );
 
             $lastId = DB::table('user')->insertGetId($data, 'id_user');
-            
-            if($request->file('foto') != null) {
-                $folder = 'upload/user/'.$request->get('foto');
-                $file = $request->file('foto');
-                $filename = date('YmdHis').$file->getClientOriginalName();
-                $path = realpath($folder);
-                if (!($path !== true AND is_dir($path))) {
-                    mkdir($folder, 0755, true);
-                }
-                if ($file->move($folder, $filename)) {
-                    DB::table('user')->where('id_user', '=', $lastId)->update([
-                        'foto' => $folder.$filename
-                    ]);
-                }
-            }
+
+            // if($request->file('foto') != null) {
+            //     $folder = 'upload/user/'.$request->get('foto');
+            //     $file = $request->file('foto');
+            //     $filename = date('YmdHis').$file->getClientOriginalName();
+            //     $path = realpath($folder);
+            //     if (!($path !== true AND is_dir($path))) {
+            //         mkdir($folder, 0755, true);
+            //     }
+            //     if ($file->move($folder, $filename)) {
+            //         DB::table('user')->where('id_user', '=', $lastId)->update([
+            //             'foto' => $folder.$filename
+            //         ]);
+            //     }
+            // }
 
             return redirect('user')->withStatus('Berhasil menambah data');
         }
@@ -145,14 +145,14 @@ class UserController extends Controller
         $request->validate([
             'password' => 'sometimes|nullable|confirmed'
         ]);
-        try{ 
+        try{
             $data = Users::where('id_user', $id_user)->first();
-            $foto = Users::where('id_user', $id_user)->first()->foto;
+            //$foto = Users::where('id_user', $id_user)->first()->foto;
             if (!Hash::check($request->get('password'), $data->password)) {
                 DB::table('user')->where('id_user', $id_user)->update([
                     'password' => Hash::make($request->get('password')),
                 ]);
-            }            
+            }
 
             DB::table('user')->where('id_user', $id_user)->update([
                 'username' => $request->get('username'),
@@ -163,25 +163,25 @@ class UserController extends Controller
                 'email' => $request->get('email')
             ]);
 
-            if($request->file('foto') != null) {
-                $folder = 'upload/user/'.$request->get('foto');
-                $file = $request->file('foto');
-                $filename = date('YmdHis').$file->getClientOriginalName();
-                $path = realpath($folder);
-                if (!($path !== true AND is_dir($path))) {
-                    mkdir($folder, 0755, true);
-                }
-                if(file_exists($foto)){
-                    if(File::delete($foto)){
-                        if ($file->move($folder, $filename)) {
-                            DB::table('user')->where('id_user', '=', $id_user)->update([
-                                'foto' => $folder.$filename
-                            ]);
-                        }
-                    }
-                }
-                
-            }
+            // if($request->file('foto') != null) {
+            //     $folder = 'upload/user/'.$request->get('foto');
+            //     $file = $request->file('foto');
+            //     $filename = date('YmdHis').$file->getClientOriginalName();
+            //     $path = realpath($folder);
+            //     if (!($path !== true AND is_dir($path))) {
+            //         mkdir($folder, 0755, true);
+            //     }
+            //     if(file_exists($foto)){
+            //         if(File::delete($foto)){
+            //             if ($file->move($folder, $filename)) {
+            //                 DB::table('user')->where('id_user', '=', $id_user)->update([
+            //                     'foto' => $folder.$filename
+            //                 ]);
+            //             }
+            //         }
+            //     }
+
+            // }
             return redirect()->route('user.index')->with('Berhasil', 'Data User berhasil Diubah');
         }
         catch(\Exception $e){
@@ -204,14 +204,15 @@ class UserController extends Controller
     public function destroy($id_user)
     {
         try{
-            $foto = Users::where('id_user', $id_user)->first()->foto;
-            if($foto != null){
-                if(file_exists($foto)){
-                    if(File::delete($foto)){
-                        DB::table('user')->where('id_user', $id_user)->delete();
-                    }
-                }
-            }
+            // $foto = Users::where('id_user', $id_user)->first()->foto;
+            // if($foto != null){
+            //     if(file_exists($foto)){
+            //         if(File::delete($foto)){
+            //             DB::table('user')->where('id_user', $id_user)->delete();
+            //         }
+            //     }
+            // }
+            DB::table('user')->where('id_user', $id_user)->delete();
             return redirect()->route('user.index')->with('Berhasil', 'Data User berhasil Dihapus');
 
         }

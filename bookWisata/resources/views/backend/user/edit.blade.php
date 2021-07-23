@@ -27,13 +27,13 @@
 
     @if ($errors->any())
         <div class=" alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br> 
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li> {{ $error}} </li>
                 @endforeach
             </ul>
-        </div>    
+        </div>
     @endif
 
     <!-- Main content -->
@@ -86,11 +86,11 @@
                         <label for="email">Email</label>
                         <input type="text" class="form-control" id="email" value="{{ $user->email }}" name="email">
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="foto">Foto</label>
                         <input type="file" class="form-control-file" id="foto" name="foto" value="{{ $user->foto }}"><br>
                         <img width="100px" height="100px" src="{{ url(''.$user->foto) }}" alt=" {{ $user->name }}">
-                    </div>
+                    </div> --}}
                     <input type="submit" value="simpan" class="btn btn-primary"></td>
                 </form>
                 </div>

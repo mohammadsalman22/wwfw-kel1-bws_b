@@ -42,7 +42,7 @@
                   <div class="table-responsive">
                     <table id="dataTable" class="table table-bordered">
                       <thead>
-                        <tr> 
+                        <tr>
                           <th>No</th>
                           <th>Username</th>
                           <th>Nama</th>
@@ -64,12 +64,12 @@
                             <td>{{ $item->alamat }}</td>
                             <td>{{ $item->no_hp }}</td>
                             <td>{{ $item->email }}</td>
-                            <td>
+                            {{-- <td>
                                 <a data-toggle="modal" class="showDetailData" data-target=".modal-show-detail" data-image=" {{ url(''.$item->foto) }}">
                                     <img src="{{ url(''.$item->foto) }}" alt=" {{ $item->name }}" width="200" height="300">
                                 </a>
                                 {{ $item->name }}
-                            </td>
+                            </td> --}}
                             <td>
                                 <div class="form-inline p-0">
                                     <a href="{{ route('user.edit',$item->id_user) }}" class="btn btn-success mr-2" title="Edit" data-toggle="tooltip"> <span class="fa fa-pen"></span> </a>
