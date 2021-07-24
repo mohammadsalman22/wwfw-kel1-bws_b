@@ -10,15 +10,16 @@ use Illuminate\Support\Facades\DB;
 
 class BookingController extends Controller
 {
-    public function getBooking()
+    public function getBooking(Request $request)
     {
         $status = null;
         $message = null;
         $data = null;
 
         try {
-            $data = Booking::all();
-            $data = DetailBooking::all();
+            $data = Booking::join('detail_booking', 'detail_booking.kode_booking', 'booking.kode_booking')
+                            ->where('booking.kode_booking', $request->get('kode_booking'))
+                            ->first();
 
             $status = 200;
             $message = 'Berhasil';
@@ -48,7 +49,7 @@ class BookingController extends Controller
             $data->waktu_mulai = $request->get('waktu_mulai');
             $data->waktu_akhir = $request->get('waktu_akhir');
             $data->total_harga = $request->get('total_harga');
-            $data->status = $request->get('status');
+            $data->status = 'menunggu';
             $data->id_pembayaran = $request->get('id_pembayaran');
             $data->id_user = $request->get('id_user');
             $data->save();
@@ -56,10 +57,11 @@ class BookingController extends Controller
             $data2 = new DetailBooking;
             $data2->kode_booking = $data->id;
             $data2->jumlah_pesan = $request->get('jumlah_pesan');
-            if($request->get('id_travel_homestay') != null) {
+
+            if($request->get('id_travel_homestay') != null || $request->get('id_travel_homestay') != 'null') {
                 $data2->id_travel_homestay = $request->get('id_travel_homestay');
             }
-            if($request->get('id_wisata') != null) {
+            if($request->get('id_wisata') != null || $request->get('id_wisata') != 'null') {
                 $data2->id_wisata = $request->get('id_wisata');
             }
             $data2->save();
@@ -73,10 +75,12 @@ class BookingController extends Controller
         } catch (\Illuminate\Database\QueryException $e) {
             $status = 400;
             $message = $e->getMessage();
-        } finally {
+        }
+        finally {
             $result = [
                 'status' => $status,
-                'message' => $message
+                'message' => $message,
+                'data' => $data
             ];
             return response($result, $status);
         }

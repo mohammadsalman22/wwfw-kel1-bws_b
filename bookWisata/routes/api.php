@@ -29,7 +29,7 @@ Route::get('list-homestay', 'API\HomestayController@listHomestay');
 Route::get('filter-homestay', 'API\HomestayController@filterHomestay');
 Route::get('get-travelhomestay', 'API\HomestayController@getTravelHomestay');
 Route::get('get-metode', 'API\MetodeController@getMetode');
-Route::post('get-booking', 'API\BookingController@getBooking');
+Route::get('get-booking', 'API\BookingController@getBooking');
 Route::post('post-booking', 'API\BookingController@postBooking');
 Route::post('get-detailbooking', 'API\DetailBookingController@getDetailBooking');
 Route::post('post-detailbooking', 'API\DetailBookingController@postDetailBooking');
