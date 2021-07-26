@@ -16,7 +16,7 @@ class MetodeController extends Controller
     public function index()
     {
         $metode_pembayaran = Metode::all();
-        return view('backend.metode.index')->with('metode_pembayaran', $metode_pembayaran);//->with('i',(request()->input('page',1)-1)*5);
+        return view('backend.metode.index')->with('metode_pembayaran', $metode_pembayaran);
     }
 
     /**
@@ -45,7 +45,7 @@ class MetodeController extends Controller
             'no_tujuan'=>'required'
         ],
         [
-            'required' => 'Harap isi :attribute', 
+            'required' => 'Harap isi :attribute',
             'min' => 'Panjang karakter minimal 2'
         ],
         [
@@ -107,8 +107,8 @@ class MetodeController extends Controller
     {
         $request->validate([
         ]);
-        try{ 
-            $data = Metode::where('id_pembayaran', $id_pembayaran)->first();          
+        try{
+            $data = Metode::where('id_pembayaran', $id_pembayaran)->first();
 
             DB::table('metode_pembayaran')->where('id_pembayaran', $id_pembayaran)->update([
                 'nama' => $request->get('nama'),
@@ -138,9 +138,9 @@ class MetodeController extends Controller
     {
         try{
             $foto = Metode::where('id_pembayaran', $id_pembayaran)->first()->foto;
-            
+
             DB::table('metode_pembayaran')->where('id_pembayaran', $id_pembayaran)->delete();
-             
+
             return redirect()->route('metode.index')->with('Berhasil', 'Data Metode Pembayaran berhasil Dihapus');
 
         }

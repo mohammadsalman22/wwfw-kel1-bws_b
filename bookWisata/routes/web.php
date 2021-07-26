@@ -33,6 +33,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('metode','MetodeController');
 
+    Route::resource('riwayat','RiwayatController');
+
     Route::resource('admin', 'UsersController')
         ->middleware('auth');
 });

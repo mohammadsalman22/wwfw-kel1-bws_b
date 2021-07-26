@@ -85,21 +85,21 @@
           </li>
           <li class="nav-header">REPORT</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{  route('riwayat.index')  }}" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Booking
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="pages/gallery.html" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 User
               </p>
             </a>
-          </li>
+          </li> --}}
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

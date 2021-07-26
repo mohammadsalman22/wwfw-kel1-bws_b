@@ -101,4 +101,32 @@ class UserController extends Controller
             return response($result, $status);
         }
     }
+
+    public function getProfilUser(Request $request) {
+        $status = null;
+        $message = null;
+        $data = null;
+
+        try {
+
+            $data = Users::select('id_user', 'username', 'password', 'nama', 'jk', 'alamat', 'no_hp', 'email')->where('id_user', $request->get('id_user'))->first();
+
+            $message = 'Berhasil';
+            $status = 200;
+        } catch (\Exception $e) {
+            $status = 400;
+            $message = $e->getMessage();
+        } catch (\Illuminate\Database\QueryException $e) {
+            $status = 400;
+            $message = $e->getMessage();
+        } finally {
+            $result = [
+                'status' => $status,
+                'message' => $message,
+                'data' => $data
+            ];
+            return response($result, $status);
+        }
+    }
+
 }
