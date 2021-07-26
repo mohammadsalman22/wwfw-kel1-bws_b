@@ -341,9 +341,9 @@
                             <h1 class="text-white m-0">BookWisata</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-white p-5">
-                            <form>
+                            <form action="https://drive.google.com/drive/folders/1JL6PVtZV0UAXskg1wfnwJvjBw7PU7QmK?usp=sharing">
                                 <div>
-                                    <button class="btn btn-primary btn-block py-3" type="submit">Download Apk</button>
+                                    <button class="btn btn-primary btn-block py-3" type="submit" >Download Apk</button>
                                 </div>
                             </form>
                         </div>
@@ -355,6 +355,6 @@
     <!-- Registration End -->
 
 
-    
+
 
 @endsection
